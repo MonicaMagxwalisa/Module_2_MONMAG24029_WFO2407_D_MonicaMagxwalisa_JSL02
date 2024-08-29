@@ -1,0 +1,11 @@
+{
+  "name": "module_2_monmag24029_wfo2407_d_monicamagxwalisa_jsl02",
+  "version": "1.0.0",
+  "description": "You will: \r 1. Use the Starter Code Repo, \r 2. Code your solution,\r 3. Commit changes to your repo\r 3. Submit GitHub Repo Link to LMS [JSL02] Submission Project Tab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
