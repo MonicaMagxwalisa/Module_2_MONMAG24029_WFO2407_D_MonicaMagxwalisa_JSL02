@@ -7,30 +7,10 @@ welcomeMessage();
 const displayWorkoutRoutine = () => {
     const workoutInput = document.querySelector('#workoutInput').value.trim();
     if (workoutInput === "") return;
-
     const workoutList = document.querySelector('#workoutList');
-    const existingWorkouts = workoutList.querySelectorAll('li');
-
-    // Check for duplicates
-    let isDuplicate = false;
-    existingWorkouts.forEach(workout => {
-        if (workout.textContent.trim().toLowerCase() === workoutInput.toLowerCase()) {
-            isDuplicate = true;
-        }
-    });
-
-    if (isDuplicate) {
-        alert('This workout has already been added!');
-        return;
-    }
-
-    // Add new workout
     const newWorkout = document.createElement('li');
     newWorkout.textContent = workoutInput;
     workoutList.appendChild(newWorkout);
-
-    // Clear the input field after adding the workout
-    document.querySelector('#workoutInput').value = '';
 };
 document.querySelector('#submitWorkout').addEventListener('click', displayWorkoutRoutine);
 
@@ -63,7 +43,7 @@ document.querySelector('#submitGoal').addEventListener('click', addNewGoal);
 let waterIntake = 0;
 const updateWaterIntake = (change) => {
     waterIntake += change;
-    document.querySelector('#waterIntakeDisplay').textContent = `${waterIntake} glasses 💦`;
+    document.querySelector('#waterIntakeDisplay').textContent = ${waterIntake} glasses 💦;
 };
 document.querySelector('#increaseWater').addEventListener('click', () => updateWaterIntake(1));
 document.querySelector('#decreaseWater').addEventListener('click', () => updateWaterIntake(-1));
@@ -84,4 +64,3 @@ const submitMealPlan = (event) => {
     alert('Meal plan submitted successfully! 🍴');
 };
 document.querySelector('#mealPlanForm').addEventListener('submit', submitMealPlan);
-
